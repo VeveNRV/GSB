@@ -1,38 +1,38 @@
 <?php
 session_start();
+include ('connexionBDD.php');
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Gestion de Frais GSB</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-</head>
-
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>Gestion de Frais GSB</title>
+            <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
+            <link href="../css/bootstrap.min.css" rel="stylesheet">
+        </head>
     <body>
         <section class="container formulaire">
             <h1>Application Gestion Frais</h1>
 <?php
 if (isset($_SESSION["newuser"]) &&  $_SESSION["newuser"]) {
-    ?>
+?>
             <div class="alert alert-success" role="alert">
-                Nouvel utilisateur ajouté avec succès
+                Nouvel utilisateur ajouté avec succès !
             </div>
 <?php
 }
 ?>
             <form action="functions/login.php" method="POST">
-            <div class="form-group">
-                <label>Rôle</label>
-                <select name="role" class="form-control">
-                    <option selected>Rôle...</option>
-                    <option>Utilisateur</option>
-                    <option>Comptable</option>
-                    <option>Administrateur</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label>Rôle</label>
+                    <select name="role" class="form-control">
+                        <option selected>Rôle...</option>
+                        <option>Utilisateur</option>
+                        <option>Comptable</option>
+                        <option>Administrateur</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="labelForm">Nom</label>
                     <input type="text"  name="nom" class="form-control" placeholder="Entrez votre nom...">
@@ -49,8 +49,15 @@ if (isset($_SESSION["newuser"]) &&  $_SESSION["newuser"]) {
                     <label for="labelForm">Mot de passe</label>
                     <input type="password" name="mdp" class="form-control" placeholder="Entrez votre mot de passe...">
                 </div>
-                <input class="btn btn-primary" type="submit" value="Valider" />
+                <input class="btn btn-primary" type="submit" value="Valider"/>
+                <a href="liste.php">Accéder à la liste des utilisateurs</a>
             </form>
         </section>
     </body>
 </html> 
+
+<?php
+
+    
+
+?>
