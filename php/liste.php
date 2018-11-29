@@ -1,6 +1,6 @@
 <?php
     //Récupère le fichier bdd
-    include 'connexionBDD.php';
+    include ('connexionBDD.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,22 +13,23 @@
 
     <body>
 
-    <section class="list">  
         <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Rôle</th>
-                <th scope="col">Nom</th>
-                <th scope="col">Prénom</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">Mot de passe</th>
-            </tr>
-        </thead>
-        
-    </section>  
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Rôle</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Date de naissance</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Mot de passe</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Code Postal</th>
+                    <th scope="col">Pseudo</th>
+                    <th scope="col">Date d'embauche</th>
+                </tr>
+            </thead>
 
-    </body>
 </html>
 
 <?php
@@ -49,9 +50,9 @@
             "</tr>";        
     }
 
-    //Indique quand le traitement est terminé
+    //Termine le traitement de la requête
     $reponse->closeCursor();
 ?>
-    </table>
+        </table>
     </body>
 </html>
