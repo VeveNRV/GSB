@@ -16,7 +16,7 @@
             $this->fiche_frais = $newFiche_frais;
         }
 
-            // get et set ID
+            // get et set Id
 
         public function getId()
         {

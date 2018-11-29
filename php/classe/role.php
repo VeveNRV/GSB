@@ -22,8 +22,6 @@
         public function setId() 
         {
             $this->id = $value;
-<<<<<<< HEAD
-=======
         }
 
             // get et set libelle
@@ -36,7 +34,6 @@
         public function setLibelle() 
         {
             $this->libelle = $value;
->>>>>>> f7af23a2c3bd85fb9fc1f6d4ccca31cd22144086
         }
     }
 ?>
